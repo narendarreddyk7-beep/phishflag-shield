@@ -1,0 +1,104 @@
+/* PhishFlag Shield — injected link styling. Kept low-specificity and
+   !important-free where possible so it layers on top of a page's own
+   styles without fighting them too aggressively. */
+
+a.phishflag-checking {
+  outline: 2px dashed #38bdf8;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a.phishflag-safe {
+  outline: 2px solid #34f5a4;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a.phishflag-unsafe {
+  outline: 2px solid #fb5e5e;
+  outline-offset: 2px;
+  border-radius: 2px;
+  background: rgba(251, 94, 94, 0.08);
+}
+
+.phishflag-tooltip {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 320px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font: 500 12.5px/1.4 -apple-system, system-ui, sans-serif;
+  color: #eaf1fb;
+  background: #0b111e;
+  border: 1px solid #1b2740;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.phishflag-tooltip--safe {
+  border-color: #34f5a4;
+}
+
+.phishflag-tooltip--unsafe {
+  border-color: #fb5e5e;
+}
+
+.phishflag-tooltip--checking {
+  border-color: #38bdf8;
+}
+
+.phishflag-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483647;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 18px;
+  background: #0b111e;
+  border-bottom: 2px solid #fb5e5e;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  font: 500 13.5px/1.5 -apple-system, system-ui, sans-serif;
+  color: #eaf1fb;
+}
+
+.phishflag-banner__text strong {
+  color: #fb5e5e;
+}
+
+.phishflag-banner__url {
+  display: block;
+  margin-top: 2px;
+  color: #8ba0c4;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.phishflag-banner__actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.phishflag-btn {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: 1px solid #1b2740;
+  font: 600 13px -apple-system, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.phishflag-btn--ghost {
+  background: #1b2740;
+  color: #eaf1fb;
+}
+
+.phishflag-btn--danger {
+  background: transparent;
+  color: #fb5e5e;
+  border-color: #fb5e5e;
+}

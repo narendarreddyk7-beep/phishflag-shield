@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="pf-header">
+    <span class="pf-logo">Phish<span class="pf-logo-accent">Flag</span> Shield</span>
+  </header>
+
+  <div class="pf-row">
+    <span>Protection</span>
+    <label class="pf-switch">
+      <input type="checkbox" id="toggle" />
+      <span class="pf-switch-track"></span>
+    </label>
+  </div>
+
+  <div class="pf-stats">
+    <div class="pf-stat">
+      <span class="pf-stat-num" id="checkedCount">0</span>
+      <span class="pf-stat-label">links checked</span>
+    </div>
+    <div class="pf-stat">
+      <span class="pf-stat-num pf-stat-num--danger" id="flaggedCount">0</span>
+      <span class="pf-stat-label">flagged risky</span>
+    </div>
+  </div>
+
+  <p class="pf-note">
+    Hover any link on a page to check it against PhishFlag's live scanner.
+    Toggling protection applies on your next page reload.
+  </p>
+
+  <a class="pf-link" href="https://phishflag.app" target="_blank" rel="noopener">Open full PhishFlag scanner →</a>
+
+  <script src="popup.js"></script>
+</body>
+</html>
